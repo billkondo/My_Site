@@ -1,5 +1,6 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const ClearWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = (env) => {
   const isProduction = env == 'production';
@@ -11,35 +12,48 @@ module.exports = (env) => {
       path: path.join(__dirname, 'public', 'dist'),
       filename: 'bundle.js'
     },
-    module: {
-      rules: [
-        {
-          loader: 'babel-loader',
-          test: /\.js$/,
-          exclude: /node_modules/
-        },
-        {
-          test: /\.s?css$/,
-          use: [
-            MiniCssExtractPlugin.loader,
-            {
-              loader: 'css-loader',
-              options: {
-                sourceMap: true
+    module:
+    {
+      rules:
+        [
+          {
+            loader: 'babel-loader',
+            test: /\.js$/,
+            exclude: /node_modules/
+          },
+          {
+            test: /\.s?css$/,
+            use: [
+              MiniCssExtractPlugin.loader,
+              {
+                loader: 'css-loader',
+                options: {
+                  sourceMap: true
+                }
+              },
+              {
+                loader: 'sass-loader',
+                options: {
+                  sourceMap: true
+                }
               }
-            },
-            {
-              loader: 'sass-loader',
+            ]
+          },
+          {
+            test: /\.(png|jpg)$/,
+            exclude: /node_modules/, 
+            use: [{
+              loader: 'url-loader',
               options: {
-                sourceMap: true
+                name: 'images/[hash]-[name].[ext]'
               }
-            }
-          ]
-        }
-      ]
+            }]
+          },
+        ]
     },
     plugins: [
-      CSSExtract
+      CSSExtract,
+      new ClearWebpackPlugin([path.join(__dirname, 'public', 'dist')])
     ],
     devtool: isProduction ? "source-map" : "inline-source-map",
     devServer: {

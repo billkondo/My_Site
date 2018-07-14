@@ -7,7 +7,7 @@ const Site = () => (
   <div id="site">
     <Header />
     <Body />
-    <Footer />
+    
   </div>
 );
 
