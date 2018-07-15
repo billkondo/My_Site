@@ -1,0 +1,50 @@
+.description {
+  display: grid;
+  
+  box-sizing: border-box;
+  background: beige;
+  height: 100%;
+  width: 100%;
+
+  border-radius: 40px;
+  font-family: 'Patrick Hand';
+
+  .title {
+    font-size: 60px;
+    padding-top: 10px;
+    text-align: center;
+
+    color: pink;
+    text-shadow: 
+      2px 2px darkorchid,
+      -2px -2px darkorchid,
+      3px 3px 5px darkorchid;
+
+    letter-spacing: 4px;
+  }
+
+  .explanation {
+    font-size: 40px;
+    // margin-top: 50px;
+    // padding-left: 15px;
+    // padding-right: 15px;  
+    text-align: center; 
+  }
+
+  .tag {
+    display: inline-block;
+    background: darkgreen;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    height: 25px;
+    padding: 5px;
+    margin: 10px;
+  }
+
+  .tags {
+    // position: absolute;
+    justify-self: center;
+    align-self: center;
+  }
+}
