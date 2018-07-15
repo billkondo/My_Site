@@ -40,15 +40,13 @@ module.exports = (env) => {
             ]
           },
           {
-            test: /\.(png|jpg)$/,
-            exclude: /node_modules/, 
-            use: [{
-              loader: 'url-loader',
-              options: {
-                name: 'images/[hash]-[name].[ext]'
-              }
-            }]
-          },
+            test: /\.(jpg|png|svg)$/,
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'images/'
+            }
+          }
         ]
     },
     plugins: [

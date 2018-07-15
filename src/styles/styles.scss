@@ -1,7 +1,9 @@
 @import './base/base';
 @import './components/Body';
+@import './components/DrumMachine';
 @import './components/Footer';
 @import './components/Header';
+@import './components/PomodoroClock';
 @import './components/Projects';
 @import './components/ReactCalculator';
 @import './components/Site';
@@ -11,3 +13,4 @@
   height: 100%;
   width: 100%;
 }
+
