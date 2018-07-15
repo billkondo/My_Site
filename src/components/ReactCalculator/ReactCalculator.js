@@ -1,7 +1,7 @@
 import React from 'react';
 import Description from './../Description/Description';
 
-class DrumMachine extends React.Component {
+class ReactCalculator extends React.Component {
   state = {
     description: false
   }
@@ -15,16 +15,16 @@ class DrumMachine extends React.Component {
 
   render() {
     return (
-      <div id="drum-machine"
+      <div id="react-calculator"
         onMouseEnter={this.flipState}
         onMouseLeave={this.flipState}
       >
         {
           this.state.description && 
           <Description 
-            title={"Drum Machine"}
-            text={`Like Music ? `}
-            tags={['Javascript', 'CSS3', 'React', 'Audio']}
+            title={"Calculator"}
+            text={`Need to do some calculations ?`}
+            tags={['Javascript', 'CSS3', 'React', 'Redux']}
           />
         }
       </div>
@@ -32,4 +32,4 @@ class DrumMachine extends React.Component {
   }
 }
 
-export default DrumMachine;
+export default ReactCalculator;
