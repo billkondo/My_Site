@@ -1,8 +1,14 @@
 #pomodoro-clock {
   border: 2px dotted orange; 
-  grid-row:  5/9;
+  grid-row: 5/9;
   grid-column: 5/9;
   border-radius: 25px; 
+  cursor: pointer;
+  background-image: url('../images/PomodoroClock.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-color: beige; 
 }
 
 #pomodoro-clock:hover {
