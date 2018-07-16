@@ -2,7 +2,7 @@
   grid-row: 2/6;
   grid-column: 1/5;
 
-  border: 2px dotted green; 
+  border: 3px dotted green; 
   border-radius: 25px; 
 
   background-image: url('../images/TicTacToe-320x420.png');
@@ -15,5 +15,5 @@
 }
 
 #tic-tac-toe:hover {
-  border: 2px solid green;
+  border: 5px solid green;
 }
