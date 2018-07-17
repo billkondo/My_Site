@@ -1,7 +1,12 @@
 #body {
+  min-height: 80vh;
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 3fr 1fr; 
   align-items: center;
   justify-items: center;
+}
+
+.contain-site {
+  grid-column: 2/3;
 }

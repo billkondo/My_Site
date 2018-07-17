@@ -1,9 +1,9 @@
 import React from 'react';
-import Projects from './Projects.js';
+import BodyRouter from '../routers/BodyRouter';
 
 const Body = () => (
   <div id="body">
-    <Projects />
+    <BodyRouter />
   </div>
 );
 
