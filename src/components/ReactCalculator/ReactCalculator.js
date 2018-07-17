@@ -1,9 +1,11 @@
 import React from 'react';
 import Description from './../Description/Description';
+import { Redirect } from 'react-router-dom';
 
 class ReactCalculator extends React.Component {
   state = {
-    description: false
+    description: false,
+    click: false
   }
 
   flipState = () => 
@@ -13,11 +15,20 @@ class ReactCalculator extends React.Component {
       };
     });
 
+  triggerClick = () => 
+    this.setState({
+      click: true
+    });
+
   render() {
+    if (this.state.click) 
+      return <Redirect push to='/ReactCalculator' />
+
     return (
       <div id="react-calculator"
         onMouseEnter={this.flipState}
         onMouseLeave={this.flipState}
+        onClick={this.triggerClick}
       >
         {
           this.state.description && 

@@ -1,0 +1,125 @@
+.react-calculator-app {
+  #calculator {
+    height: 500px;
+    width: 400px;
+    background: #111;
+    margin: 200px auto;
+    
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 3fr;
+
+    border: 1px solid black;
+
+    border-radius: 7px;
+  }
+
+  #buttons {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr; 
+    grid-gap: 1px;
+    grid-template-areas:  
+      "ac c back divide"
+      "seven eight nine multiply"
+      "four five six subtract"
+      "one two three add"
+      "zero zero decimal equals"
+  }
+
+  #clear { grid-area: ac; }
+  #equals { grid-area: equals; }
+  #add { grid-area: add; }
+  #subtract { grid-area: subtract; }
+  #divide { grid-area: divide; }
+  #multiply { grid-area: multiply; }
+  #decimal { grid-area: decimal; }
+  #zero { grid-area: zero; }
+  #one { grid-area: one; }
+  #two { grid-area: two; }  
+  #three { grid-area: three; }
+  #four { grid-area: four; }
+  #five { grid-area: five; }
+  #six { grid-area: six; }
+  #seven { grid-area: seven; }
+  #eight { grid-area: eight; }
+  #nine { grid-area: nine; }
+  #backspace { grid-area: back; }
+  #clear-number { grid-area: c; }
+
+  #display-all {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
+  }
+
+  .button {
+    background-color: lightgrey;
+    color: black;
+    height: 100%;
+    width: 100%;
+    font-weight: bold;
+    border-radius: 3px;
+    font-size: 25px;
+    color: #1B1B1B;
+  }
+
+  #clear, #equals, #add, #subtract, #divide, #multiply, #decimal, #zero, #one, #two, #three, #four, #five, #six, #seven, #eight, #nine, #backspace, #clear-number {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center; 
+
+    border: 1px solid black;
+  }
+
+  #clear {
+    background-color: lightcoral; 
+  }
+
+  #equals {
+    background-color: lightblue;
+  }
+
+  #buttons {
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-bottom: 5px;
+  }
+
+  #display-all {
+    color: white;
+    display: grid;
+    grid-template-rows: 5fr 6fr;
+    grid-template-columns: 1fr;
+  }
+
+  #display, #display-expression {
+    padding-left: 7px;
+    padding-right: 7px;
+    text-align: right;
+    font-weight: bold;
+  }
+
+  #display { 
+    padding-top: 10px; 
+    font-size: 50px;
+  }
+
+  #display-expression {
+    padding-top: 20px; 
+    font-size: 25px;
+    overflow: auto;
+  }
+
+  #clear {
+    color: darkred;
+  }
+
+  #equals {
+    color: darkblue;
+    font-weight: bold;
+    font-size: 40px;
+  }
+}

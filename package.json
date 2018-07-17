@@ -10,6 +10,7 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "big.js": "^5.1.2",
     "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^0.28.11",
     "express": "^4.16.3",

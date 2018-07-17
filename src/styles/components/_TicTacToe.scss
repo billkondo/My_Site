@@ -1,19 +1,21 @@
-#tic-tac-toe {
-  grid-row: 2/6;
-  grid-column: 1/5;
+#projects {
+  #tic-tac-toe {
+    grid-row: 2/6;
+    grid-column: 1/5;
 
-  border: 3px dotted green; 
-  border-radius: 25px; 
+    border: 3px dotted green; 
+    border-radius: 25px; 
 
-  background-image: url('../images/TicTacToe-320x420.png');
-  background-repeat: no-repeat; 
-  background-size: contain;
-  background-position: center;
-  background-color: beige; 
+    background-image: url('../images/TicTacToe-320x420.png');
+    background-repeat: no-repeat; 
+    background-size: contain;
+    background-position: center;
+    background-color: beige; 
 
-  cursor: pointer;
-}
+    cursor: pointer;
+  }
 
-#tic-tac-toe:hover {
-  border: 5px solid green;
+  #tic-tac-toe:hover {
+    border: 5px solid green;
+  }
 }

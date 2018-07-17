@@ -3,13 +3,10 @@ import ReactDOM from 'react-dom';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import Site from './components/Site';
+import store from './store/createStore';
 import './styles/styles.scss';
 
-const reducer = (state, action) => {
-  return state;
-}
-
-const store = createStore(reducer);
+console.log(store.getState());
 
 ReactDOM.render(
   <Provider store={store}>

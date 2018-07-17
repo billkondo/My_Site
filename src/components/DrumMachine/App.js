@@ -370,7 +370,7 @@ class DrumMachine extends React.Component {
 
   render() {
     return (
-      <div id="drum-machine-app">
+      <div id="drum-machine">
         <Control
           on={this.state.on}
           flipState={this.flipState}

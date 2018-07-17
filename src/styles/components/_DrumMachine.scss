@@ -1,16 +1,18 @@
-#drum-machine {
-  border: 3px dotted red;
-  border-radius: 25px;
-  grid-row: 6/9;
-  grid-column: 1/5;
-  cursor: pointer;
-  background-image: url('../images/DrumMachine.png');
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  background-color: beige; 
-}
+#projects {
+  #drum-machine {
+    border: 3px dotted red;
+    border-radius: 25px;
+    grid-row: 6/9;
+    grid-column: 1/5;
+    cursor: pointer;
+    background-image: url('../images/DrumMachine.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: beige; 
+  }
 
-#drum-machine:hover {
-  border: 5px solid red;
+  #drum-machine:hover {
+    border: 5px solid red;
+  }
 }

@@ -1,14 +1,16 @@
 import React from 'react';
 import Projects from '../components/Projects';
+import DrumMachineApp from '../components/DrumMachine/DrumMachineApp';
+import ReactCalculatorApp from '../components/ReactCalculator/ReactCalculatorApp';
 import { BrowserRouter, Route, Switch} from 'react-router-dom';
-import DrumMachineApp from '../components/DrumMachine/DrumMachineApp'
 
 const BodyRouter = () => (
     <BrowserRouter>
       <Switch>
         <Route exact path='/' component={Projects} />
-        <Route path='/DrumMachine' component={DrumMachineApp} />
-        <Route path='/TicTacToe'/>
+        <Route exact path='/DrumMachine' component={DrumMachineApp} />
+        <Route exact path='/ReactCalculator' component={ReactCalculatorApp} />
+        <Route exact path='/TicTacToe'/>
       </Switch>
     </BrowserRouter>
 );

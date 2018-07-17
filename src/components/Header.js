@@ -19,12 +19,16 @@ const Github = () => (
   </div>
 );
 
-const Header = () => (
-  <div id="header">
-    <Logo />
-    <Theme />  
-    <Github /> 
-  </div>
-);
+class Header extends React.Component {
+  render() {
+    return (
+      <div id="header">
+        <Logo />
+        <Theme />
+        <Github />
+      </div>
+    );
+  }
+}
 
 export default Header;

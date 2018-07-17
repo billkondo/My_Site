@@ -22,7 +22,7 @@ class DrumMachine extends React.Component {
 
   render() {
     if (this.state.click) {
-      return <Redirect to='/DrumMachine' />
+      return <Redirect push to='/DrumMachine' />
     }
 
     return (

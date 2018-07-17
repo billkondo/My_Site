@@ -4,13 +4,17 @@ import ReactCalculator from './ReactCalculator/ReactCalculator';
 import DrumMachine from './DrumMachine/DrumMachine';
 import PomodoroClock from './PomodoroClock/PomodoroClock';
 
-const Projects = () => (
-  <div id="projects">
-    <TicTacToe />
-    <ReactCalculator />
-    <DrumMachine />
-    <PomodoroClock /> 
-  </div>
-);
+class Projects extends React.Component {
+  render() {
+    return (
+      <div id="projects" >
+        <TicTacToe />
+        <ReactCalculator />
+        <DrumMachine />
+        <PomodoroClock />
+      </div>
+    );
+  }
+}
 
 export default Projects;
