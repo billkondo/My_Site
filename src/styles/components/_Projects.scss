@@ -3,7 +3,7 @@
  
   grid-column: 2/3;
   height: 70vh;
-  width: 45vw;
+  width: 40vw;
 
   margin-top: 8vh; 
 
@@ -13,4 +13,9 @@
   grid-template-columns: repeat(8, 1fr);
 
   grid-gap: 1vw;
+
+  @media (max-width: 1200px) {
+    height: 700px;
+    width: 70vw;
+  }
 }
