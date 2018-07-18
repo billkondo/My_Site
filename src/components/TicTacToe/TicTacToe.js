@@ -1,9 +1,11 @@
 import React from 'react';
 import Description from './../Description/Description';
+import { Redirect } from 'react-router-dom';
 
 class TicTacToe extends React.Component {
   state = {
-    description: false
+    description: false,
+    click: false
   }
 
   flipState = () => 
@@ -13,11 +15,20 @@ class TicTacToe extends React.Component {
       };
     });
 
+  triggetClick = () => 
+    this.setState({
+      click: true
+    });
+
   render() {
+    if (this.state.click)
+      return <Redirect push to='/TicTacToe' />
+
     return (
       <div id="tic-tac-toe"
         onMouseEnter={this.flipState}
         onMouseLeave={this.flipState}
+        onClick={this.triggetClick}
       >
         {
           this.state.description && 

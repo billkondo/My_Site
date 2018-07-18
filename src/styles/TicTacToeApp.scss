@@ -1,0 +1,232 @@
+.tic-tac-toe-app {
+  #table {
+    position: initial;
+    box-sizing: border-box;
+    margin: 200px auto;
+    background-color: rgb(255, 145, 0);
+    height: 750px;
+    width: 660px;
+    overflow: auto;
+    border-radius: 40px;
+    box-shadow: 10px 0px 20px #333, -10px 0 20px #333, 0 30px 20px -10px #333, 10px 10px 20px rgb(177, 116, 4) inset, -10px -10px 20px rgb(177, 116, 4) inset;
+  }
+
+  #board {
+    box-sizing: border-box;
+    position: relative;
+    background: radial-gradient(rgb(6, 223, 6), rgb(2, 36, 6));
+    height: 650px;
+    width: 600px;
+    margin-top: 10px;
+    margin-left: 30px;
+    border-collapse: collapse;
+    border-radius: 40px;
+    box-shadow: 10px 10px 20px rgb(3, 61, 3) inset, -10px -10px 20px rgb(3, 61, 3) inset;
+  }
+
+  /* Start Menu Style */
+
+  #start-menu {
+    display: block;
+  }
+
+  #question {
+    color: white;
+    box-sizing: border-box;
+    text-align: center;
+    padding-top: 45px;
+    padding-left: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+    font-family: cursive;
+    font-size: 50px;
+    text-shadow: 6px 6px 6px #333;
+  }
+
+  button {
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-shadow: 6px 6px 6px #333;
+    color: white;
+    font-family: cursive;
+    font-size: 50px;
+    height: 100px;
+    width: 200px;
+    background-color: inherit;
+    margin-left: 50px;
+  }
+
+  button:hover {
+    border: 3px dashed rgba(245, 241, 241, 0.384);
+    border-radius: 20px;
+    color: rgba(245, 241, 241, 0.384);
+  }
+
+  button:focus {
+    outline: none;
+  }
+
+  /* Decision Menu Style */
+
+  #decision-menu {
+    display: none;
+  }
+
+  #backButton {
+    margin-top: 50px;
+    margin-left: 190px;
+    font-size: 30px;
+  }
+
+  /* Game Menu Style */
+
+  #game-menu {
+    display: none;
+  }
+
+  .row {
+    display: block;
+  }
+
+  .square {
+    display: inline-grid;
+    color: white;
+    box-sizing: content-box;
+    border: 2px solid white;
+    font-family: cursive;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 200px;
+    font-size: 80px;
+    margin-right: -4px;
+    width: 190px;
+    height: 200px;
+  }
+
+  .row>div:first-child {
+    border-left: 0;
+    margin-left: 12px;
+  }
+
+  .row>div:last-child {
+    border-right: 0;
+  }
+
+  #game-menu>.row:first-child .square {
+    border-top: 0;
+    margin-top: 30px;
+  }
+
+  #game-menu>.row:last-child .square {
+    border-bottom: 0;
+  }
+
+  /* Score Style */
+
+  #score {
+    box-sizing: border-box;
+    height: 50px;
+    width: inherit;
+  }
+
+  #resetAll {
+    box-sizing: border-box;
+    display: none;
+    position: absolute;
+    margin: 0;
+    color: rgb(223, 52, 22);
+    text-shadow: 1px 3px 10px #333;
+    height: 50px;
+    width: 150px;
+    margin-left: 15px;
+    font-size: 30px;
+  }
+
+  .scoreDisplay {
+    box-sizing: border-box;
+    display: none;
+    margin-top: 10px;
+    color: rgba(211, 80, 57, 0.829);
+    text-shadow: 1px 3px 10px #333;
+    margin-left: 60px;
+    height: 60px;
+    width: 170px;
+    font-size: 20px;
+    font-family: cursive;
+  }
+
+  #resetAll:hover {
+    color: rgba(211, 80, 57, 0.486);
+    border: 3px dashed rgba(211, 80, 57, 0.486);
+  }
+
+  #firstPlayerWarning {
+    position: absolute;
+    font-family: cursive;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    height: 100px;
+    width: 200px;
+    padding-top: 30px;
+    margin-left: 40px;
+    background: rgb(33, 65, 153);
+    background: linear-gradient(rgb(33, 65, 153), rgb(54, 101, 231));
+    z-index: -1;
+    text-shadow: 1px 3px 10px #333;
+  }
+
+  #secondPlayerWarning {
+    position: absolute;
+    font-family: cursive;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    height: 100px;
+    width: 200px;
+    padding-top: 30px;
+    margin-left: 420px;
+    background: rgb(38, 122, 143);
+    background: linear-gradient(rgb(38, 122, 143), rgb(39, 172, 206));
+    z-index: -1;
+    text-shadow: 1px 3px 10px rgb(29, 29, 29);
+  }
+
+  #firstPlayerScore {
+    color: rgb(33, 65, 153);
+  }
+
+  #secondPlayerScore {
+    color: rgb(38, 122, 143);
+  }
+
+  #game-end {
+    display: none;
+    position: absolute;
+    box-sizing: border-box;
+    font-family: cursive;
+    opacity: 0.7;
+    height: inherit;
+    width: inherit;
+    top: 0px;
+    color: rgb(255, 255, 255);
+    border-radius: 40px;
+    background: radial-gradient(black, rgb(56, 49, 49));
+    text-align: center;
+    padding-top: 200px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 80px;
+  }
+
+  .noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+}
