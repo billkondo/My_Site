@@ -1,0 +1,140 @@
+.pomodoro-clock-app {
+  #pomodoro-clock {
+    background-color: #DA8A67;
+    
+    height: 600px;
+    width: 600px;
+    margin: 200px auto;
+
+    border-radius: 600px;
+
+    border: 5px solid #E97451;
+
+    box-shadow: 0px 3px 20px 2px #333;
+  }
+
+  #settings {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+
+    height: 100px;
+    width: 350px;
+
+    margin-left: 125px;
+    margin-top: 70px;
+  }
+
+  #break-settings, #session-settings {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  #control-settings {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    
+    font-size: 30px;
+    align-items: center;
+    justify-items: center;
+
+    width: 150px;
+    margin-left: 12.5px;
+  }
+
+  #break-label, #session-label {
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: 'Bree Serif';
+    color: #B94E48;
+  }
+
+  #break-length, #session-length {
+    font-weight: bold;
+    font-family: 'Orbitron';
+    color: #CA3435;
+  }
+
+  #break-decrement, #session-decrement, #break-increment, #session-increment {
+    font-size: 20px;
+    color: #B33B24;
+    cursor: pointer;
+    -webkit-text-stroke: 0.5px black;
+  }
+
+  #break-decrement:hover, #session-decrement:hover, #break-increment:hover, #session-increment:hover {
+    opacity: 0.5;
+  }
+
+  #break-decrement:active, #session-decrement:active, #break-increment:active, #session-increment:active {
+    position: relative;
+    top: 2px;
+  }
+
+  #timer {
+    height: 350px;
+    width: 350px;
+    margin: 0 auto;
+    margin-top: 60px;
+    color: #CA3435;
+  }
+
+  #timer-label {
+    color: #B94E48;
+    height: 50px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Bree Serif';
+    -webkit-text-stroke: 0.1px black;
+  }
+
+  #time-left {
+    height: 80px;
+    font-size: 70px;
+    text-align: center;
+    margin-top: 40px;
+    font-family: 'Orbitron';
+    background: darkred;
+    border-radius: 20px; 
+    border: 1px solid black;
+    padding: auto;
+    -webkit-text-stroke: 2px black;
+  }
+
+  #start_stop {
+    color: #B33B24;
+    cursor: pointer;
+    -webkit-text-stroke: 1px black;
+  }
+
+  #reset {
+    color: #B33B24;
+    cursor: pointer;
+    -webkit-text-stroke: 1px black;
+  }
+
+  #reset:hover, #start_stop:hover {
+    opacity: 0.5;
+  }
+
+  #reset:active, #start_stop:active {
+    position: relative;
+    top: 2px;
+  }
+
+  #control {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 40px;
+    height: 50px;
+
+    align-items: center;
+    justify-items: center;
+    font-size: 50px;
+  }
+}

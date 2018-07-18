@@ -205,8 +205,6 @@ class Calculator extends React.Component {
   }
 }
 
-// REDUX 
-
 const operationAction = (op) => ({
   type: 'OPERATION',
   op

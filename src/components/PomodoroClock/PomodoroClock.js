@@ -1,9 +1,11 @@
 import React from 'react';
 import Description from './../Description/Description';
+import { Redirect } from 'react-router-dom';
 
 class PomodoroClock extends React.Component {
   state = {
-    description: false
+    description: false,
+    click: false
   }
 
   flipState = () => 
@@ -13,11 +15,20 @@ class PomodoroClock extends React.Component {
       };
     });
 
+  triggerClick = () => 
+    this.setState({
+      click: true
+    });
+
   render() {
+    if (this.state.click)
+      return <Redirect push to='/PomodoroClock' />
+
     return (
       <div id="pomodoro-clock"
         onMouseEnter={this.flipState}
         onMouseLeave={this.flipState}
+        onClick={this.triggerClick}
       >
         {
           this.state.description && 
