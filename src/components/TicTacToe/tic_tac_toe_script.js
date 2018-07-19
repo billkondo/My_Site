@@ -592,10 +592,10 @@ function INITIALIZE() {
     let pixels = 0;
 
     const move = setInterval(() => {
-        if (pixels <= -80) {
+        if (pixels <= -100) {
             clearInterval(move);
         }
-        pixels += -20;
+        pixels += -17;
         obj.style.marginTop = pixels.toString() + "px";
     }, 30);
   }
