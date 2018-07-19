@@ -16,7 +16,7 @@ class site extends React.Component {
     return (
       <div id="site" style={style}>
         <Header />
-        <Body />
+        <Body theme={this.props.theme} />
         <Footer />
       </div>
     );

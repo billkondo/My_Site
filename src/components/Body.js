@@ -1,10 +1,22 @@
 import React from 'react';
 import BodyRouter from '../routers/BodyRouter';
 
-const Body = () => (
-  <div id="body">
-    <BodyRouter />
-  </div>
-);
+
+class Body extends React.Component {
+  render() {
+    let style = {};
+
+    if (this.props.theme)
+      style = {
+        backgroundColor: "#222"
+      }
+
+    return (
+      <div id="body" style={style}>
+        <BodyRouter />
+      </div>
+    );
+  }
+}
 
 export default Body;
