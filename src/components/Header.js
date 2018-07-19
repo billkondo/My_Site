@@ -1,34 +1,146 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
-const Logo = () => (
-  <div id="logo">
-    BK
-  </div>
-);
+class Logo extends React.Component {
+  render() {  
+    let style = {};
 
-const Theme = ({ theme }) => (
-  <div id="theme-button">
-    {theme && <i className="fas fa-lightbulb" />}
-    {!theme && <i className="far fa-lightbulb" />}
-  </div>
-);
+    if (this.props.theme) 
+      style = {
+        backgroundColor: "#d83a2d",
+        color: "#852f31"
+      }
 
-const Github = () => (
-  <div id="github-link">
-    <a href="https://github.com/billkondo" target="_blank"> <i className="fab fa-github" /> </a>
-  </div>
-);
-
-class Header extends React.Component {
-  render() {
     return (
-      <div id="header">
-        <Logo />
-        <Theme />
-        <Github />
+      <div id="logo" style={style}>
+        BK
+     </div>
+    );
+  }
+}
+
+class theme extends React.Component {
+  state = {
+    mouseOver: false
+  }
+
+  enter = () =>
+    this.setState({
+      mouserOver: true
+    });
+
+  leave = () =>
+    this.setState({
+      mouserOver: false
+    });
+
+  render() {
+    let style = {};
+
+    if (this.props.theme)
+      style = {
+        color: "#d83a2d"
+      }
+
+    return (
+      <div
+        id="theme-button"
+        onMouseEnter={this.enter}
+        onMouseLeave={this.leave}
+        onClick={this.props.switchTheme}
+        style={style}
+      >
+        {
+          this.state.mouserOver &&
+          <div className="card" style={style}>
+            Day/Night Theme
+          </div>
+        }
+        <div id="icon">
+          {!this.props.theme && <i className="fas fa-lightbulb" />}
+          {this.props.theme && <i className="far fa-lightbulb" />}
+        </div>
       </div>
     );
   }
 }
+
+const Theme = connect(
+  (state) => ({
+    theme: state.theme.theme
+  }),
+  (dispatch) => ({
+    switchTheme: () => dispatch({ type: 'SWITCH_THEME' })
+  })
+)(theme);
+
+class Github extends React.Component {
+  state = {
+    mouserOver: false
+  }
+
+  enter = () =>
+    this.setState({
+      mouserOver: true
+    });
+
+  leave = () =>
+    this.setState({
+      mouserOver: false
+    });
+
+  render() {
+    let style = {};
+
+    if (this.props.theme)
+      style = {
+        color: "#d83a2d"
+      }
+
+    return (
+      <div
+        id="github-link"
+        onMouseEnter={this.enter}
+        onMouseLeave={this.leave}
+        style={style}
+      >
+        {
+          this.state.mouserOver &&
+          <div className="card" style={style}>
+            My Github
+          </div>
+        }
+
+        <a href="https://github.com/billkondo" target="_blank" style={style}> <i className="fab fa-github" /> </a>
+      </div>
+    );
+  }
+}
+
+class header extends React.Component {
+  render() {
+    let style = {};
+
+    if (this.props.theme)
+      style = {
+        backgroundColor: "#852f31",
+        borderColor: "#ba312b"
+      }
+
+    return (
+      <div id="header" style={style}>
+        <Logo theme={this.props.theme}/>
+        <Theme />
+        <Github theme={this.props.theme} />
+      </div>
+    );
+  }
+}
+
+const Header = connect(
+  (state) => ({
+    theme: state.theme.theme
+  })
+)(header);
 
 export default Header;

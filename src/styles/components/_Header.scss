@@ -28,11 +28,15 @@
 
   text-align: center;
   color: salmon;
+  font-weight: bold;
   
   padding-top: 1.5vh; 
+
+  box-shadow: 1px 1px 50px #333 inset;
 }
 
 #github-link {
+  position: relative;
   font-size: 2.5vh;
 
   grid-row: 2/3;
@@ -52,22 +56,46 @@
     position: relative;
     top: 0.2vh;
   }
+
+  .card {
+    position: absolute;
+    font-size: 1.1vh;
+    height: 2vh;
+    width: 2.5vw;
+    color: darkred;
+
+    left: -3.5em;
+    top: 0.2em;
+  }
 }
 
 #theme-button {
+  position: relative;
   font-size: 2.5vh;
   color: darkred;
   cursor: pointer;
 
   justify-self: center;
   align-self: center;
-}
 
-#theme-button:hover {
-  opacity: 0.5;
-}
+  
+  #icon:hover {
+    opacity: 0.5;
+  }
 
-#theme-button:active {
-  position: relative;
-  top: 0.2vh;
+  #icon:active {
+    position: relative;
+    top: 0.2vh;
+  }
+
+  .card {
+    position: absolute;
+    font-size: 1.1vh;
+    height: 2vh;
+    width: 3.2vw;
+    color: darkred;
+
+    left: -4.9em;
+    top: 0.2em;
+  }
 }

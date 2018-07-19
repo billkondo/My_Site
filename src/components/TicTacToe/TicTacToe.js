@@ -29,6 +29,7 @@ class TicTacToe extends React.Component {
         onMouseEnter={this.flipState}
         onMouseLeave={this.flipState}
         onClick={this.triggetClick}
+        style={this.props.style}
       >
         {
           this.state.description && 

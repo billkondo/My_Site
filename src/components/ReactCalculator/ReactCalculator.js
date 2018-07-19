@@ -29,6 +29,7 @@ class ReactCalculator extends React.Component {
         onMouseEnter={this.flipState}
         onMouseLeave={this.flipState}
         onClick={this.triggerClick}
+        style={this.props.style}
       >
         {
           this.state.description && 
