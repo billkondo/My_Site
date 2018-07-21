@@ -4,6 +4,7 @@ import DrumMachineApp from '../components/DrumMachine/DrumMachineApp';
 import ReactCalculatorApp from '../components/ReactCalculator/ReactCalculatorApp';
 import PomodoroClockApp from '../components/PomodoroClock/PomodoroClockApp';
 import TicTacToeApp from '../components/TicTacToe/TicTacToeApp';
+import AboutMe from '../components/AboutMe/AboutMe';
 import { BrowserRouter, Route, Switch} from 'react-router-dom';
 
 const BodyRouter = () => (
@@ -14,6 +15,7 @@ const BodyRouter = () => (
         <Route exact path='/ReactCalculator' component={ReactCalculatorApp} />
         <Route exact path='/PomodoroClock' component={PomodoroClockApp} />
         <Route exact path='/TicTacToe' component={TicTacToeApp} />
+        <Route exact path='/AboutMe' component={AboutMe}/>
       </Switch>
     </BrowserRouter>
 );

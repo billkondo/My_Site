@@ -1,0 +1,76 @@
+#tools {
+  height: 3vh;
+  margin-top: 100px;
+  // background: red;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr; 
+
+  align-items: center;
+  justify-items: center;
+
+  .github-link-project {
+    position: relative;
+    font-size: 50px;
+    color: darkred;
+    cursor: pointer;
+
+    a:visited {
+      color: darkred;
+    }
+
+    a:hover {
+      opacity: 0.5;
+    }
+
+    a:active {
+      position: relative;
+      top: 5px;
+    }
+  }
+
+  #back-link {
+    position: relative;
+    font-size: 50px;
+    color: darkred;
+
+    a:visited {
+      color: darkred;
+    }
+
+    a:hover {
+      opacity: 0.5;
+    }
+
+    a:active {
+      position: relative;
+      top: 5px;
+    }
+  }
+
+  #information {
+    position: relative;
+    font-size: 50px;
+    color: darkred;
+    cursor: pointer;
+  }
+
+  // #information:hover {
+  //   opacity: 0.5;
+  // }
+
+  #information:active {
+    position: relative;
+    top: 5px;
+  }
+
+  .message {
+    position: absolute;
+    font-size: 20px;
+    font-family: 'Patrick Hand';
+
+    top: 60px;
+    text-align: center;
+  }
+}
+
