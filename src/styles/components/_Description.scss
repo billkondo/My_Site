@@ -39,11 +39,59 @@
     color: white;
     height: 30px;
     padding: 5px;
-    margin: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 10px;  
   }
 
   .tags {
     justify-self: center;
     align-self: center;
+  }
+}
+
+@media (max-width: 1500px) {
+  .description {
+    .title {
+      font-size: 50px;
+      letter-spacing: 4px;
+    }
+  
+    .explanation {
+      font-size: 30px;
+    }
+  
+    .tag {
+      font-size: 13px;
+      color: white;
+      height: 20px;
+      padding: 5px;
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-bottom: 15px;  
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .description {
+    .title {
+      font-size: 30px;
+      letter-spacing: 4px;
+    }
+  
+    .explanation {
+      font-size: 25px;
+    }
+  
+    .tag {
+      font-size: 10px;
+      color: white;
+      height: 20px;
+      padding: 5px;
+      margin-left: 5px;
+      margin-right: 5px;
+      margin-bottom: 3px;  
+    }
   }
 }

@@ -8,94 +8,150 @@
   grid-template-columns: 1fr 1fr;
 
   border-bottom: 0.2vh solid darkred;
-}
 
-#logo {
-  box-sizing: border-box;
-
-  justify-self: center;
-  align-self: center;
-
-  grid-row: 1/3;
-
-  height: 6vh;
-  width: 6vh;
-  border-radius: 6vh;
-  background-color: darkred;
-  font-size: 3vh;
-
-  font-family: cursive;
-
-  text-align: center;
-  color: salmon;
-  font-weight: bold;
+  #logo {
+    box-sizing: border-box;
   
-  padding-top: 1.5vh; 
-
-  box-shadow: 1px 1px 50px #333 inset;
-}
-
-#github-link {
-  position: relative;
-  font-size: 2.5vh;
-
-  grid-row: 2/3;
-  grid-column: 2/3;
-  justify-self: center;
-  align-self: center;
-
-  a:link, a:visited {
-    color: darkred;
-  }
-
-  a:hover {
-    opacity: 0.5;
-  }
-
-  a:active {
-    position: relative;
-    top: 0.2vh;
-  }
-
-  .card {
-    position: absolute;
-    font-size: 1.1vh;
-    height: 2vh;
-    width: 2.5vw;
-    color: darkred;
-
-    left: -3.5em;
-    top: 0.2em;
-  }
-}
-
-#theme-button {
-  position: relative;
-  font-size: 2.5vh;
-  color: darkred;
-  cursor: pointer;
-
-  justify-self: center;
-  align-self: center;
-
+    justify-self: center;
+    align-self: center;
   
-  #icon:hover {
-    opacity: 0.5;
+    grid-row: 1/3;
+  
+    height: 6vh;
+    width: 6vh;
+    border-radius: 6vh;
+    background-color: darkred;
+    font-size: 3vh;
+  
+    font-family: cursive;
+  
+    text-align: center;
+    color: salmon;
+    font-weight: bold;
+    
+    padding-top: 1.5vh; 
+  
+    box-shadow: 1px 1px 50px #333 inset;
   }
-
-  #icon:active {
+  
+  #github-link {
     position: relative;
-    top: 0.2vh;
+    font-size: 2.5vh;
+  
+    grid-row: 2/3;
+    grid-column: 2/3;
+    justify-self: center;
+    align-self: center;
+  
+    a:link, a:visited {
+      color: darkred;
+    }
+  
+    a:hover {
+      opacity: 0.5;
+    }
+  
+    a:active {
+      position: relative;
+      top: 0.2vh;
+    }
+  
+    .card {
+      position: absolute;
+      font-size: 1.1vh;
+      height: 2vh;
+      width: 2.5vw;
+      color: darkred;
+  
+      left: -3.5em;
+      top: 0.2em;
+    }
   }
-
-  .card {
-    position: absolute;
-    font-size: 1.1vh;
-    height: 2vh;
-    width: 3.2vw;
+  
+  #theme-button {
+    position: relative;
+    font-size: 2.5vh;
     color: darkred;
+    cursor: pointer;
+  
+    justify-self: center;
+    align-self: center;
+  
+    
+    #icon:hover {
+      opacity: 0.5;
+    }
+  
+    #icon:active {
+      position: relative;
+      top: 0.2vh;
+    }
+  
+    .card {
+      position: absolute;
+      font-size: 1.1vh;
+      height: 2vh;
+      width: 3.2vw;
+      color: darkred;
+  
+      left: -4.9em;
+      top: 0.2em;
+    }
+  } 
+}
 
-    left: -4.9em;
-    top: 0.2em;
+@media (max-width: 1500px) {
+  #header {
+    #logo {
+      margin-right: 15vw; 
+    }
+    #github-link, #theme-button {
+      margin-left: 15vw;
+    }
   }
 }
+
+@media (max-width: 800px) {
+  #header {
+    #logo {
+      margin-right: 30vw;
+    }
+    #github-link, #theme-button {
+      margin-left: 30vw;
+    }
+  }
+}
+
+@media (max-height: 1000px) {
+  #header {
+    height: 90px;
+  
+    #logo {
+      height: 70px;
+      width: 70px;
+      border-radius: 70px;
+    
+      font-size: 30px;
+    
+      font-family: cursive;      
+      padding-top: 20px; 
+    }
+    
+    #github-link {
+      font-size: 30px;
+
+      .card {
+        font-size: 15px;
+      }
+    }
+    
+    #theme-button {
+      font-size: 30px;
+      
+      .card {
+        font-size: 15px;
+      }
+    } 
+  }
+}
+

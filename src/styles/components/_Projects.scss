@@ -2,10 +2,8 @@
   box-sizing: border-box;
  
   grid-column: 2/3;
-  height: 70vh;
-  width: 40vw;
-
-  margin-top: 8vh; 
+  height: 1000px;
+  width: 45vw;
 
   display: grid;
 
@@ -13,9 +11,19 @@
   grid-template-columns: repeat(8, 1fr);
 
   grid-gap: 1vw;
+  margin-top: 2vh;
+}
 
-  @media (max-width: 1200px) {
-    height: 700px;
-    width: 70vw;
+@media (max-width: 1500px) {
+  #projects {
+    width: 60vw;
+    height: 750px;
   }
 }
+
+@media (max-width: 800px) {
+  #projects {
+    width: 90vw;
+    height: 500px;
+  }
+} 
