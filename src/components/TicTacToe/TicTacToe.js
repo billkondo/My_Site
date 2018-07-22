@@ -8,14 +8,17 @@ class TicTacToe extends React.Component {
     click: false
   }
 
-  flipState = () => 
-    this.setState((prevState) => {
-      return {
-        description: !prevState.description
-      };
+  mouseEnter = () =>
+    this.setState({
+      description: true
     });
 
-  triggetClick = () => 
+  mouseLeave = () =>
+    this.setState({
+      description: false
+    });
+
+  triggetClick = () =>
     this.setState({
       click: true
     });
@@ -26,17 +29,17 @@ class TicTacToe extends React.Component {
 
     return (
       <div id="tic-tac-toe"
-        onMouseEnter={this.flipState}
-        onMouseLeave={this.flipState}
+        onMouseEnter={this.mouseEnter}
+        onMouseLeave={this.mouseLeave}
         onClick={this.triggetClick}
         style={this.props.style}
       >
         {
-          this.state.description && 
-          <Description 
+          this.state.description &&
+          <Description
             title={"Tic Tac Toe"}
             text={`Play a Tic Tac Toe game with the computer or a friend`}
-            tags={['Javascript', 'HTML', 'CSS']}
+            tags={['Javascript', 'HTML', 'CSS', 'JQuery']}
           />
         }
       </div>

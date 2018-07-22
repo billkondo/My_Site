@@ -8,11 +8,14 @@ class PomodoroClock extends React.Component {
     click: false
   }
 
-  flipState = () => 
-    this.setState((prevState) => {
-      return {
-        description: !prevState.description
-      };
+  mouseEnter = () =>
+    this.setState({
+      description: true
+    });
+
+  mouseLeave = () =>
+    this.setState({
+      description: false
     });
 
   triggerClick = () => 
@@ -26,8 +29,8 @@ class PomodoroClock extends React.Component {
 
     return (
       <div id="pomodoro-clock"
-        onMouseEnter={this.flipState}
-        onMouseLeave={this.flipState}
+        onMouseEnter={this.mouseEnter}
+        onMouseLeave={this.mouseLeave}
         onClick={this.triggerClick}
         style={this.props.style}
       >

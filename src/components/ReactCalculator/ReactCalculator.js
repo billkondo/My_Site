@@ -8,32 +8,35 @@ class ReactCalculator extends React.Component {
     click: false
   }
 
-  flipState = () => 
-    this.setState((prevState) => {
-      return {
-        description: !prevState.description
-      };
+  mouseEnter = () =>
+    this.setState({
+      description: true
     });
 
-  triggerClick = () => 
+  mouseLeave = () =>
+    this.setState({
+      description: false
+    });
+
+  triggerClick = () =>
     this.setState({
       click: true
     });
 
   render() {
-    if (this.state.click) 
+    if (this.state.click)
       return <Redirect push to='/ReactCalculator' />
 
     return (
       <div id="react-calculator"
-        onMouseEnter={this.flipState}
-        onMouseLeave={this.flipState}
+        onMouseEnter={this.mouseEnter}
+        onMouseLeave={this.mouseLeave}
         onClick={this.triggerClick}
         style={this.props.style}
       >
         {
-          this.state.description && 
-          <Description 
+          this.state.description &&
+          <Description
             title={"Calculator"}
             text={`Need to do some calculations ?`}
             tags={['Javascript', 'CSS3', 'React', 'Redux', 'Big.js']}

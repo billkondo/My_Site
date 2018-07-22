@@ -1,5 +1,7 @@
 #tools {
-  height: 3vh;
+  display: block;
+
+  height: 6vh;
   margin-top: 7vh;
   display: grid;
   grid-template-rows: 1fr;
@@ -8,13 +10,15 @@
   align-items: center;
   justify-items: center;
 
+  margin-bottom: 100px;
+
   .github-link-project {
     position: relative;
     font-size: 50px;
     color: darkred;
     cursor: pointer;
 
-    a:visited {
+    a:visited, a:link {
       color: darkred;
     }
 
@@ -47,16 +51,20 @@
     }
   }
 
+  #contain-information {
+    position: relative;
+    color: darkred;
+  }
+
   #information {
     position: relative;
     font-size: 50px;
-    color: darkred;
     cursor: pointer;
   }
 
-  // #information:hover {
-  //   opacity: 0.5;
-  // }
+  #information:hover {
+    opacity: 0.5;
+  }
 
   #information:active {
     position: relative;

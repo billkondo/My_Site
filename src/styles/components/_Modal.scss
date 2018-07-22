@@ -1,0 +1,106 @@
+.modal {
+  position: absolute;
+  background: rgba(51, 51, 51, 0.8);
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 20;
+
+  .box-modal {
+    position: relative;
+    margin: 18vh auto;
+    width: 40vw;
+    min-height: 50vh;
+    background: #e8dad4;
+
+    box-shadow: 
+      10px 10px 30px #222,
+      -10px -10px 30px #222;
+
+    .header-modal {
+      height: 50px;
+      width: 100%;
+      background: lightcoral;
+      border-bottom: 2px solid darkred; 
+
+      font-size: 40px;
+      padding-top: 5px; 
+      text-align: center;
+      color: darkred;
+      font-family: "Bree Serif"
+    }
+
+    .body-modal {
+      p {
+        font-size: 30px;
+
+        margin: 20px;
+        font-family: "EB Garamond";
+
+        color: darkred;
+      }
+
+      a:link {
+        text-decoration: none;
+        color: darkred;
+        font-weight: bold;
+      }
+    
+      a:visited {
+        text-decoration: none;
+        color: darkred;
+      }
+    
+      a:hover {
+        color: darkred;
+        opacity: 0.5;
+      }
+      
+      a:active {
+        color: darkred;
+      }
+
+      ul {
+        margin: 20px;
+        margin-top: 30px;
+
+        li {
+          margin: 20px;
+          font-size: 25px;
+          list-style-type: square;
+          color: darkred;
+        }
+      }
+    }
+
+    .footer-modal {
+      position: absolute;
+      background: lightcoral;
+      height: 20px;
+      width: 100%;
+      bottom: 0;
+
+      border-top: 2px solid darkred; 
+    }
+  }
+
+  .exit-modal {
+    position: absolute;
+    font-size: 30px;
+    text-align: center;
+
+    color: darkred;
+
+    cursor: pointer;
+    bottom: 0;
+    left: 50%;
+
+    margin-bottom: 30px;
+  }
+
+  .exit-modal:hover {
+    opacity: 0.5;
+  }
+}
+

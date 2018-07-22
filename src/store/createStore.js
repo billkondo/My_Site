@@ -11,4 +11,14 @@ const store = createStore(
   })
 );
 
+store.subscribe(() => {
+  const state = store.getState();
+
+  if (state.theme.theme && window.localStorage.theme !== 'dark')
+    window.localStorage.theme = 'dark';
+
+  if (!state.theme.theme && window.localStorage.theme !== 'light')
+    window.localStorage.theme = 'light';
+});
+
 export default store;

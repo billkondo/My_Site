@@ -4,7 +4,7 @@ const defaultState = {
 
 const theme = (state = defaultState, action) => {
   switch (action.type) {
-    case 'SWITCH_THEME':
+    case 'SWITCH_THEME': 
       return {
         ...state, 
         theme: !state.theme

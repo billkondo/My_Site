@@ -5,6 +5,13 @@ import Footer from './Footer';
 import { connect } from 'react-redux';
 
 class site extends React.Component {
+  componentWillMount() {
+    const theme = window.localStorage.theme;
+    
+    if (theme === 'dark') 
+      this.props.switchTheme();
+  }
+
   render() {
     let style = {};
 
@@ -26,6 +33,9 @@ class site extends React.Component {
 const Site = connect(
   (state) => ({
     theme: state.theme.theme
+  }),
+  (dispatch) => ({
+    switchTheme: () => dispatch({ type: 'SWITCH_THEME' })
   })
 )(site);
 

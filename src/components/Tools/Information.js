@@ -5,12 +5,12 @@ class Information extends React.Component {
     mouseover: false
   }
 
-  mouseEnter = () => 
+  mouseEnter = () =>
     this.setState({
       mouseover: true
     });
 
-  mouseLeave = () => 
+  mouseLeave = () =>
     this.setState({
       mouseover: false
     });
@@ -18,26 +18,24 @@ class Information extends React.Component {
   render() {
     let style = this.props.style;
 
-    style = {
-      ...style, 
-      opacity: "1.0"
-    }
-
     return (
-      <div 
-        id="information"
-        onMouseEnter={this.mouseEnter}
-        onMouseLeave={this.mouseLeave}
-        style={this.props.style}
-      >
-        {!this.props.theme && <i className="fas fa-question-circle" /> }
-        {this.props.theme && <i className="far fa-question-circle" /> }
+      <div id="contain-information">
+        <div
+          id="information"
+          onMouseEnter={this.mouseEnter}
+          onMouseLeave={this.mouseLeave}
+          onClick={this.props.setModal}
+          style={this.props.style}
+        >
+          {!this.props.theme && <i className="fas fa-question-circle" />}
+          {this.props.theme && <i className="far fa-question-circle" />}
+        </div>
 
         {
-          this.state.mouseover && 
+          this.state.mouseover &&
           <div className="message" style={style} >
             About this project
-          </div>
+            </div>
         }
       </div>
     );
