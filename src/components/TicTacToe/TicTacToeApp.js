@@ -9,7 +9,7 @@ const URL = 'https://github.com/billkondo/Web-Development-Training/tree/master/F
 const description = 
 `
   <p> 
-    A <a href="https://en.wikipedia.org/wiki/Tic-tac-toe" target="_blank"> Tic Tac Toe </a> Game is originally a papel and pencil game, but nowadays you are able 
+    The <a href="https://en.wikipedia.org/wiki/Tic-tac-toe" target="_blank"> Tic Tac Toe </a> is originally a paper and pencil game, but nowadays you are able 
     to play this game in the computer.
   </p>
 
@@ -19,8 +19,7 @@ const description =
   </p>
 
   <p>
-    The computer movements are based on a Dynamic Programming Algorithm and this game was developed using:
-
+    The computer movements are based on a Dynamic Programming Algorithm and this game was developed with:
   </p>
 
   <ul>

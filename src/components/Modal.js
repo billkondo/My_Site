@@ -10,7 +10,7 @@ class Modal extends React.Component {
   }
 
   clickOnWindow = (e) => {
-    if (!this.node.contains(e.target)) 
+    if (!this.node.contains(e.target))
       this.props.setModal();
   }
 
@@ -21,20 +21,29 @@ class Modal extends React.Component {
   clickExit = () => this.props.setModal();
 
   render() {
+    let style = {};
+
+    if (this.props.theme)
+      style = {
+        color: "#d83a2d",
+        backgroundColor: "#852f31",
+        borderColor: "#ba312b"
+      }
+
     return (
       <div className="modal">
         <div className="box-modal" ref={node => this.node = node}>
-          <div className="header-modal">
+          <div className="header-modal" style={style}>
             About {this.props.title}
-          </div>  
+          </div>
 
           <div className="body-modal" dangerouslySetInnerHTML={this.getHTML()} />
 
-          <div className="exit-modal" onClick={this.clickExit} >
-            <i className="fas fa-times-circle" />
-          </div>
-
-          <div className="footer-modal">
+          <div className="footer-modal" style={style}>
+            <div className="exit-modal" onClick={this.clickExit} style={style}>
+              {!this.props.theme && <i className="fas fa-times-circle" />}
+              {this.props.theme && <i className="far fa-times-circle" />}
+            </div>
           </div>
         </div>
       </div>

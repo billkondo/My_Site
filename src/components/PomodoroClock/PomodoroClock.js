@@ -39,7 +39,7 @@ class PomodoroClock extends React.Component {
           <Description 
             title={"Pomodoro Clock"}
             text={`Time to study ?`}
-            tags={['Javascript', 'CSS3', 'React', 'Redux', 'Audio']}
+            tags={['Javascript', 'HTML', 'CSS3', 'React', 'Redux', 'Audio']}
           />
         }
       </div>

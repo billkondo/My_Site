@@ -41,7 +41,7 @@ class DrumMachine extends React.Component {
           <Description
             title={"Drum Machine"}
             text={`Like Music ? `}
-            tags={['Javascript', 'CSS3', 'React', 'Audio']}
+            tags={['Javascript', 'HTML', 'CSS3', 'React', 'Audio']}
           />
         }
       </div>

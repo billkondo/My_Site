@@ -39,7 +39,7 @@ class ReactCalculator extends React.Component {
           <Description
             title={"Calculator"}
             text={`Need to do some calculations ?`}
-            tags={['Javascript', 'CSS3', 'React', 'Redux', 'Big.js']}
+            tags={['Javascript', 'HTML', 'CSS3', 'React', 'Redux', 'Big.js']}
           />
         }
       </div>

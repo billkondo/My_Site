@@ -45,6 +45,7 @@ class tools extends React.Component {
             setModal={this.setModal}
             title={this.props.title}
             description={this.props.description}
+            theme={this.props.theme}
           />
         }
 
