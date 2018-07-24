@@ -1,14 +1,25 @@
 #body {
+  box-sizing: content-box;
+  position: relative;
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 3fr 1fr; 
   justify-items: center;
   background-color: #e8dad4; 
-  min-height: 50vh;
+  height: 88vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-bottom: 2vh; 
 }
 
 .contain-site {
   grid-column: 2/3;
   z-index: 1;
   margin-top: 10vh;
+}
+
+@media (max-height: 1000px) {
+  #body {
+    height: 82vh;
+  }
 }

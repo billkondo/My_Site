@@ -34,7 +34,7 @@ class tools extends React.Component {
 
     if (this.props.theme)
       style = {
-        color: "#d83a2d"
+        color: "#FD0E35"
       }
 
     return (

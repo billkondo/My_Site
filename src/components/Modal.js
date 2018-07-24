@@ -27,7 +27,7 @@ class Modal extends React.Component {
       style = {
         color: "#d83a2d",
         backgroundColor: "#852f31",
-        borderColor: "#ba312b"
+        borderColor: "#FD0E35"
       }
 
     return (

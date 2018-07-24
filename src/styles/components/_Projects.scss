@@ -1,6 +1,4 @@
 #projects {
-  box-sizing: border-box;
- 
   grid-column: 2/3;
   height: 1000px;
   width: 45vw;
@@ -11,7 +9,7 @@
   grid-template-columns: repeat(8, 1fr);
 
   grid-gap: 1vw;
-  margin-top: 2vh;
+  padding-bottom: 20px; 
 }
 
 @media (max-width: 1500px) {

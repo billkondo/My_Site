@@ -8,7 +8,7 @@ class Logo extends React.Component {
     if (this.props.theme) 
       style = {
         backgroundColor: "#d83a2d",
-        color: "#852f31"
+        color: "#FD0E35"
       }
 
     return (
@@ -39,7 +39,7 @@ class theme extends React.Component {
 
     if (this.props.theme)
       style = {
-        color: "#d83a2d"
+        color: "#FD0E35"
       }
 
     return (
@@ -94,7 +94,7 @@ class Github extends React.Component {
 
     if (this.props.theme)
       style = {
-        color: "#d83a2d"
+        color: "#FD0E35"
       }
 
     return (
@@ -124,7 +124,7 @@ class header extends React.Component {
     if (this.props.theme)
       style = {
         backgroundColor: "#852f31",
-        borderColor: "#ba312b"
+        borderColor: "#FD0E35"
       }
 
     return (

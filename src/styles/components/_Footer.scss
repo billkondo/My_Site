@@ -1,8 +1,14 @@
 #footer {
-  position: fixed;
   height: 2vh;
   width: 100%;
   bottom: 0;
+  left: 0;
   background: lightcoral;
   border-top: 0.2vh solid darkred;
+}
+
+@media (max-height: 1000px) {
+  #footer {
+    height: 4vh;
+  }
 }
