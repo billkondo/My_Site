@@ -1,8 +1,9 @@
 #tools {
   display: block;
 
+  width: 45vw;
   height: 6vh;
-  margin-top: 7vh;
+  margin-top: 6vh;
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 1fr 1fr; 
@@ -17,6 +18,8 @@
     font-size: 50px;
     color: darkred;
     cursor: pointer;
+
+    justify-self: start;
 
     a:visited, a:link {
       color: darkred;
@@ -36,6 +39,8 @@
     position: relative;
     font-size: 50px;
     color: darkred;
+
+    justify-self: end;
 
     a:visited {
       color: darkred;
@@ -78,6 +83,12 @@
 
     top: 60px;
     text-align: center;
+  }
+}
+
+@media (max-width: 1500px) {
+  #tools {
+    width: 80vw;
   }
 }
 

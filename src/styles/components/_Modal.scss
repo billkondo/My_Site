@@ -118,3 +118,19 @@
   }
 }
 
+@media (max-width: 1500px) {
+  .modal {
+    .box-modal {
+      width: 70vw;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .modal {
+    .box-modal {
+      width: 100vw;
+    }
+  }
+}
+
