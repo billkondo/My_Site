@@ -137,3 +137,76 @@
     font-size: 50px;
   }
 }
+
+@media (max-width: 800px) {
+  .pomodoro-clock-app {
+    #pomodoro-clock {
+      height: 75vw;
+      width: 75vw;
+  
+      border-radius: 75vw;
+      display: grid;
+    }
+  
+    #settings {
+      align-self: center;
+      justify-self: center;
+
+      margin: 0;
+
+      display: grid;
+      grid-template-rows: 1fr;
+      grid-template-columns: 1fr 1fr;
+  
+      margin-top: 5vw;
+      height: 12vw;
+      width: 50vw;
+    }
+  
+    #control-settings {
+      font-size: 4vw;
+      width: 17vw;
+    }
+  
+    #break-label, #session-label {
+      font-size: 4.5vw;
+    }
+  
+    #break-length, #session-length {
+      font-size: 4vw;
+    }
+  
+    #break-decrement, #session-decrement, #break-increment, #session-increment {
+      font-size: 3vw;
+    }
+  
+    #timer {
+      height: 30vw;
+      width: 30vw;
+      margin: 0 auto;
+      margin-top: 5vw;
+    }
+  
+    #timer-label {
+      height: 7vw; 
+      font-size: 7vw;
+    }
+  
+    #time-left {
+      margin-top: 3vw;
+      height: 9vw;
+      font-size: 8vw;
+      text-align: center;
+      margin-top: 5vw;
+      border-radius: 10px; 
+      border: 1px solid black;
+      -webkit-text-stroke: 1px black;
+    }
+  
+    #control {
+      margin-top: 3vw;
+      height: 5vw;
+      font-size: 5vw;
+    }
+  }
+}
