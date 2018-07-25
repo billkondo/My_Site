@@ -24,8 +24,7 @@
     position: relative;
     margin: 18vh auto;
     width: 40vw;
-    background: #e8dad4;
-
+    background: #E58E73;
     box-shadow: 
       10px 10px 50px #222,
       -10px -10px 50px #222;
@@ -46,14 +45,13 @@
     .body-modal {
       width: 100%;
       height: 40vh;
-
+      font-family: "Merriweather";
       overflow: auto;
      
       p {
         font-size: 30px;
 
         margin: 20px;
-        font-family: "EB Garamond";
 
         color: darkred;
         text-align: justify;

@@ -1,0 +1,101 @@
+#about-me {
+  width: 50vw;
+  display: grid;
+  border: 7px ridge darkred;
+  padding: 30px;
+  background: #FF9980;
+
+  #title-about-me {
+    font-family: "Vast Shadow";
+    font-size: 50px;
+    font-weight: bold;  
+    justify-self: start;
+    color: darkred;
+    margin-bottom: 20px;
+    line-height: 70px;
+  }
+
+  #description-about-me {
+    font-family: "Merriweather";
+    font-size: 30px;
+    text-align: justify;
+    text-justify: inter-word;
+    color: darkred;
+
+    align-self: start;
+
+    p {
+      margin-bottom: 15px;
+    }
+
+    b {
+      font-family: "Vast Shadow";
+    }
+
+    a:link {
+      text-decoration: none;
+      font-weight: bold;
+      color: darkred;
+    }
+  
+    a:visited {
+      text-decoration: none;
+    }
+  
+    a:hover {
+      color: darkred;
+      opacity: 0.5;
+    }
+    
+    a:active {
+      color: darkred;
+    }
+  }
+
+  #site-about-me {
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: darkred;
+    justify-self: start;
+    align-self: end;
+    margin-bottom: 20px; 
+    font-family: "Vast Shadow";
+  }
+
+  #site-description-about-me {
+    font-family: "Merriweather";
+    font-size: 25px;
+    text-align: justify;
+    text-justify: inter-word;
+    color: darkred;
+
+    justify-self: start;
+    align-self: start;
+
+    p {
+      margin-bottom: 15px;
+    }
+
+    ul {
+      li {
+        list-style-type: square;
+        margin-left: 25px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1500px) {
+  #about-me {
+    width: 62vw;
+  }
+}
+
+@media (max-width: 800px) {
+  #about-me {
+    width: 80vw;
+  }
+}
