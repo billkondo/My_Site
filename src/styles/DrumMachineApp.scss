@@ -432,10 +432,22 @@
 
     .drum-pad {
       height: 7vh;
-      font-size: 5vh;
+      font-size: 4vh;
       width: 20vw;
       padding: 0;
       border-width: 3px;
+      display: grid;
+      justify-items: center;
+      align-items: center;
+      text-shadow: none;
+      
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
     }
 
     #control {
@@ -462,15 +474,38 @@
       display: grid;
       align-items: center;
       justify-items: center;
+
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
     }
 
     #options {
       width: 20vw;
       justify-self: center;
+
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
     }
 
     #volume {
       justify-self: start;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
     }
 
     #options {
@@ -538,8 +573,6 @@
   
     #volume input::-ms-fill-lower {
       height: 10vh;
-      background-color: #DA2647; 
-      border-radius: 20px;
       box-shadow: 
         -1px 0px 2px #333 inset,
         0 -1px 2px #333 inset;
@@ -547,8 +580,6 @@
   
     #volume input::-ms-fill-upper {
       height: 10vh;
-      background-color: #DA2647; 
-      border-radius: 20px;
       box-shadow: 
         -1px 0px 2px #333 inset,
         0 -1px 2px #333 inset;
