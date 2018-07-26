@@ -7,8 +7,8 @@ class Logo extends React.Component {
 
     if (this.props.theme) 
       style = {
-        backgroundColor: "#d83a2d",
-        color: "#FD0E35"
+        backgroundColor: "#FD0E35",
+        color: "darkred"
       }
 
     return (
