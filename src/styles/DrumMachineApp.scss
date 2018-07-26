@@ -397,100 +397,75 @@
     background-color: #676767;
   }
 
-  @media (max-width: 700px) {
-    #drum-machine-app {
-      width: 100vw;
-    }
-    #power, #options, #volume {
-      margin-left: 15px;
-      width: 28vw;
-    }
-
-    #power {
-      justify-self: start;
-    }
-
-    #options lable {
-      font-size: 20px;
-    }
-
-    #box-options {
-      width: 20vw;
-    }
-
-    #box-options input {
-      width: 7vw;
-    }
-
-    #volume input {
-      width: 18vw;
-    }
-
-    #volume input::-webkit-slider-thumb {
-      height: 35px;
-      margin-top: -12px;
-    }
-    
-    #volume input:disabled::-webkit-slider-thumb {
-      height: 35px;
-    }
-
-    #volume input::-moz-range-track {
-      width: 18vw;
-    }
-    
-    #volume input:disabled::-moz-range-track {
-      width: 18vw;
-    }
-
-    #volume input::-moz-range-thumb {
-      height: 35px;
-    }
-    
-    #volume input:disabled::-moz-range-thumb {
-      height: 35px;
-    }
-
-    #volume input::-ms-thumb {
-      margin-top: 3px;
-    }
-  }
-
-  @media (max-width: 450px) {
-    #drum-machine-app {
+  @media (max-width: 800px) {
+    #drum-machine {
+      width: 90vw;
+      height: 45vh;
       display: grid;
       grid-template-rows: 1fr 1fr 1fr;
       grid-template-columns: 1fr; 
+      justify-items: center;
+      align-items: center;
     }
 
     #display {
+      width: 50vw;
+      height: 7vh;
+      font-size: 2vh;
       grid-column: 1/2;
       grid-row: 1/2;
+      margin-top: 10px;
+      padding: 0;
+      display: grid;
+      align-items: center;
+      justify-items: center;
+      border-width: 3px;
     }
 
     #buttons {
       grid-column: 1/2;
       grid-row: 2/3;
+
+      width: 75vw;
+      height: 25vh;
+    }
+
+    .drum-pad {
+      height: 7vh;
+      font-size: 5vh;
+      width: 20vw;
+      padding: 0;
+      border-width: 3px;
     }
 
     #control {
+      height: 10vh;
+      width: 70vw;
       grid-column: 1/2;
       grid-row: 3/4;
 
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: 1fr;
+      grid-gap: 10px;
     }
 
     #power, #options, #volume { margin: 0;}
 
     #power {
-      width: 100px;
+      width: 20vw;
+      height: 7vh;
       justify-self: end;
+      padding: 0;
+      font-size: 3vh;
+      
+      display: grid;
+      align-items: center;
+      justify-items: center;
     }
 
     #options {
-      width: 100px;
+      width: 20vw;
       justify-self: center;
     }
 
@@ -499,48 +474,92 @@
     }
 
     #options {
-      height: 60px;
+      height: 7vh;
     }
 
     #options label {
-      margin: 3px;
-      font-size: 17px;
+      margin: 2px;
+      font-size: 2vh;
     }
 
     #box-options {
-      width: 80px;
-      height: 25px;
+      width: 15vw;
+      height: 2.5vh;
     }
     
     #box-options > input{
-      height: 20px;
-      width: 30px;
+      height: 2vh;
+      width: 5vw;
     }
 
     #volume {
-      padding-top: 20px; 
-      height: 60px;
-      width: 100px;
+      height: 7vh;
+      width: 25vw;
+      font-size: 1.8vh;
     }
-
+  
     #volume input {
-      width: 50px;
+      width: 10vw;
     }
-      
+  
+    #volume input::-webkit-slider-runnable-track {
+      height: 1vh;
+    }
+  
     #volume input::-webkit-slider-thumb {
-      height: 35px;
+      height: 5vh;
+      width: 1vw;
+      margin-top: -2vh; 
+      box-shadow: 
+        -1px 0px 2px #222 inset,
+        0 -1px 2px #222 inset;
     }
-    
-    #volume input:disabled::-webkit-slider-thumb {
-      height: 35px;
+  
+    #volume input::-ms-thumb {
+      margin-top: 5px;
+      width: 10vw;
+      height: 80vh;
     }
 
     #volume input::-moz-range-track {
-      width: 50px;
+      height: 1vh;
     }
-    
-    #volume input:disabled::-moz-range-track {
-      width: 50px;
+  
+    #volume input::-moz-range-thumb {  
+      height: 5vh;
+      width: 1vw;
+  
+      margin-top: -2vh; 
+      
+      box-shadow: 
+      -1px 0px 2px #222 inset,
+      0 -1px 2px #222 inset;
+    }
+  
+    #volume input::-ms-fill-lower {
+      height: 10vh;
+      background-color: #DA2647; 
+      border-radius: 20px;
+      box-shadow: 
+        -1px 0px 2px #333 inset,
+        0 -1px 2px #333 inset;
+    }
+  
+    #volume input::-ms-fill-upper {
+      height: 10vh;
+      background-color: #DA2647; 
+      border-radius: 20px;
+      box-shadow: 
+        -1px 0px 2px #333 inset,
+        0 -1px 2px #333 inset;
+    } 
+
+    #volume input:disabled::-ms-fill-lower {
+      height: 10vh;
+    }
+  
+    #volume input:disabled::-ms-fill-upper {
+      height: 10vh;
     }
   }
 }

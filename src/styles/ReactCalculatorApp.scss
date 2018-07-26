@@ -122,3 +122,19 @@
     font-size: 40px;
   }
 }
+
+@media (max-width: 800px) {
+  .react-calculator-app {
+    #calculator {
+      width: 80vw;
+    }
+  } 
+}
+
+@media (max-height: 1000px) {
+  .react-calculator-app {
+    #calculator {
+      height: 60vh;
+    }
+  }
+}
