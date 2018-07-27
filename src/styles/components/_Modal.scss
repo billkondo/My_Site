@@ -128,6 +128,58 @@
   .modal {
     .box-modal {
       width: 85vw;
+
+      .header-modal {
+        font-size: 30px;
+      }
+
+      .body-modal {
+        p {
+          font-size: 20px;
+
+          margin: 20px;
+
+          color: darkred;
+          text-align: justify;
+          text-justify: inter-word;
+        }
+
+        a:link {
+          text-decoration: none;
+          color: darkred;
+          font-weight: bold;
+        }
+      
+        a:visited {
+          text-decoration: none;
+          color: darkred;
+        }
+      
+        a:hover {
+          color: darkred;
+          opacity: 0.5;
+        }
+        
+        a:active {
+          color: darkred;
+        }
+
+        ul {
+          margin: 20px;
+          margin-top: 30px;
+
+          li {
+            margin: 20px;
+            font-size: 20px;
+            list-style-type: square;
+            color: darkred;
+          }
+        }
+
+        b {
+          font-weight: bold;
+        }
+      }
     }
   }
 }

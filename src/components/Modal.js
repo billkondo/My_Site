@@ -11,7 +11,8 @@ class CustomScrollbars extends React.Component {
       borderRadius: "20px",
       right: 0,
       opacity: "0.4",
-      "marginTop": "1%"
+      "marginTop": "1%",
+      "marginRight": "1px"
     }
 
     return (
