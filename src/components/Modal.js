@@ -1,4 +1,39 @@
 import React from 'react';
+import { Scrollbars } from 'react-custom-scrollbars';
+
+class CustomScrollbars extends React.Component {
+  render() {
+    const trackStyle = {
+      position: "absolute",
+      backgroundColor: "black",
+      width: "10px",
+      height: "98%", 
+      borderRadius: "20px",
+      right: 0,
+      opacity: "0.4",
+      "marginTop": "1%"
+    }
+
+    return (
+      <Scrollbars
+        thumbSize={100}
+        renderTrackVertical={props => <div {...props} style={trackStyle} />}
+
+        renderThumbVertical={props => <div {...props} style={{
+          backgroundColor: "#FD0E35",
+          borderRadius: "20px",
+          cursor: "pointer"
+        }} />
+
+        }
+
+
+        >
+        {this.props.children}
+      </Scrollbars>
+    );
+  }
+}
 
 class Modal extends React.Component {
   componentWillMount() {
@@ -37,7 +72,11 @@ class Modal extends React.Component {
             About {this.props.title}
           </div>
 
-          <div className="body-modal" dangerouslySetInnerHTML={this.getHTML()} />
+          <div className="body-modal">
+            <CustomScrollbars>
+              <div dangerouslySetInnerHTML={this.getHTML()} />
+            </CustomScrollbars>
+          </div>
 
           <div className="footer-modal" style={style}>
             <div className="exit-modal" onClick={this.clickExit} style={style}>
