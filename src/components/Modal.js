@@ -7,11 +7,11 @@ class CustomScrollbars extends React.Component {
       position: "absolute",
       backgroundColor: "black",
       width: "10px",
-      height: "98%", 
+      height: "99%",
       borderRadius: "20px",
       right: 0,
       opacity: "0.4",
-      "marginTop": "1%",
+      "marginTop": "0.4%",
       "marginRight": "1px"
     }
 
@@ -20,16 +20,14 @@ class CustomScrollbars extends React.Component {
         thumbSize={100}
         renderTrackVertical={props => <div {...props} style={trackStyle} />}
 
-        renderThumbVertical={props => <div {...props} style={{
-          backgroundColor: "#FD0E35",
-          borderRadius: "20px",
-          cursor: "pointer"
-        }} />
-
+        renderThumbVertical={props =>
+          <div {...props} style={{
+            backgroundColor: "#FD0E35",
+            borderRadius: "20px",
+            cursor: "pointer"
+          }} />
         }
-
-
-        >
+      >
         {this.props.children}
       </Scrollbars>
     );

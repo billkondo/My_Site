@@ -30,7 +30,7 @@
     padding: 5px;
     text-align: center; 
     white-space: pre-line;
-    font-family: 'EB Garamond'
+    font-family: "Merriweather";
   }
 
   .tag {
@@ -40,6 +40,7 @@
     font-size: 20px;
     color: white;
     height: 40px;
+    width: 90px;
 
     display: grid;
     align-items: center;
@@ -51,7 +52,7 @@
     align-self: center;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr; 
-    grid-gap: 30px;
+    grid-gap: 10px;
   }
 }
 
@@ -69,10 +70,11 @@
       font-size: 15px;
       color: white;
       height: 30px; 
+      width: 65px;
     }
 
     .tags {
-      grid-gap: 20px;
+      grid-gap: 10px;
     }
   }
 }
@@ -84,16 +86,11 @@
     }
   
     .explanation {
-      font-size: 15px;
-    }
-  
-    .tag {
-      font-size: 10px;
-      color: white;
-      height: 20px;
+      font-size: 20px;
     }
 
     .tags {
+      display: none;
       grid-gap: 5px;
     }
   }
