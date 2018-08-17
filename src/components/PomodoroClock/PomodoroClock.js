@@ -1,6 +1,7 @@
 import React from 'react';
 import Description from './../Description/Description';
 import { Redirect } from 'react-router-dom';
+import { CSSTransition } from 'react-transition-group';
 
 class PomodoroClock extends React.Component {
   state = {
@@ -28,21 +29,31 @@ class PomodoroClock extends React.Component {
       return <Redirect push to='/PomodoroClock' />
 
     return (
-      <div id="pomodoro-clock"
-        onMouseEnter={this.mouseEnter}
-        onMouseLeave={this.mouseLeave}
-        onClick={this.triggerClick}
-        style={this.props.style}
+      <CSSTransition
+        in={true}
+        appear={true}
+        timeout={1000}
+        classNames={{
+          appear: "animated",
+          appearActive: "slideInRight"
+        }}
       >
-        {
-          this.state.description && 
-          <Description 
-            title={"Pomodoro Clock"}
-            text={`Time to study ?`}
-            tags={['Javascript', 'HTML', 'CSS3', 'React', 'Redux', 'Audio']}
-          />
-        }
-      </div>
+        <div id="pomodoro-clock"
+          onMouseEnter={this.mouseEnter}
+          onMouseLeave={this.mouseLeave}
+          onClick={this.triggerClick}
+          style={this.props.style}
+        >
+          {
+            this.state.description && 
+            <Description 
+              title={"Pomodoro Clock"}
+              text={`Time to study ?`}
+              tags={['Javascript', 'HTML', 'CSS3', 'React', 'Redux', 'Audio']}
+            />
+          }
+        </div>
+      </CSSTransition>
     );
   }
 }

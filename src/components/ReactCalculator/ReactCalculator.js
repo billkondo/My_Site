@@ -1,6 +1,7 @@
 import React from 'react';
 import Description from './../Description/Description';
 import { Redirect } from 'react-router-dom';
+import { CSSTransition } from 'react-transition-group';
 
 class ReactCalculator extends React.Component {
   state = {
@@ -28,21 +29,31 @@ class ReactCalculator extends React.Component {
       return <Redirect push to='/ReactCalculator' />
 
     return (
-      <div id="react-calculator"
-        onMouseEnter={this.mouseEnter}
-        onMouseLeave={this.mouseLeave}
-        onClick={this.triggerClick}
-        style={this.props.style}
+      <CSSTransition
+        in={true}
+        appear={true}
+        timeout={1000}
+        classNames={{
+          appear: "animated",
+          appearActive: "slideInDown"
+        }}
       >
-        {
-          this.state.description &&
-          <Description
-            title={"Calculator"}
-            text={`Need to do some calculations ?`}
-            tags={['Javascript', 'HTML', 'CSS3', 'React', 'Redux', 'Big.js']}
-          />
-        }
-      </div>
+        <div id="react-calculator"
+          onMouseEnter={this.mouseEnter}
+          onMouseLeave={this.mouseLeave}
+          onClick={this.triggerClick}
+          style={this.props.style}
+        >
+          {
+            this.state.description &&
+            <Description
+              title={"Calculator"}
+              text={`Need to do some calculations ?`}
+              tags={['Javascript', 'HTML', 'CSS3', 'React', 'Redux', 'Big.js']}
+            />
+          }
+        </div>
+      </CSSTransition>
     );
   }
 }

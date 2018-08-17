@@ -1,6 +1,7 @@
 import React from 'react';
 import Description from './../Description/Description';
 import { Redirect } from 'react-router-dom';
+import { CSSTransition } from 'react-transition-group';
 
 class TicTacToe extends React.Component {
   state = {
@@ -28,21 +29,31 @@ class TicTacToe extends React.Component {
       return <Redirect push to='/TicTacToe' />
 
     return (
-      <div id="tic-tac-toe"
-        onMouseEnter={this.mouseEnter}
-        onMouseLeave={this.mouseLeave}
-        onClick={this.triggetClick}
-        style={this.props.style}
+      <CSSTransition
+        in={true}
+        appear={true}
+        timeout={1000}
+        classNames={{
+          appear: "animated",
+          appearActive: "slideInLeft"
+        }}
       >
-        {
-          this.state.description &&
-          <Description
-            title={"Tic Tac Toe"}
-            text={`Play a Tic Tac Toe game with the computer or a friend`}
-            tags={['Javascript', 'HTML', 'CSS', 'JQuery']}
-          />
-        }
-      </div>
+        <div id="tic-tac-toe"
+          onMouseEnter={this.mouseEnter}
+          onMouseLeave={this.mouseLeave}
+          onClick={this.triggetClick}
+          style={this.props.style}
+        >
+          {
+            this.state.description &&
+            <Description
+              title={"Tic Tac Toe"}
+              text={`Play a Tic Tac Toe game with the computer or a friend`}
+              tags={['Javascript', 'HTML', 'CSS', 'JQuery']}
+            />
+          }
+        </div>
+      </CSSTransition>
     );
   }
 }
