@@ -1,11 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { CSSTransition } from 'react-transition-group';
 
 class Logo extends React.Component {
-  render() {  
+  render() {
     let style = {};
 
-    if (this.props.theme) 
+    if (this.props.theme)
       style = {
         backgroundColor: "#FD0E35",
         color: "darkred"
@@ -52,9 +53,19 @@ class theme extends React.Component {
       >
         {
           this.state.mouserOver &&
-          <div className="card" style={style}>
-            Day/Night Theme
-          </div>
+          <CSSTransition
+            in={true}
+            appear={true}
+            timeout={1000}
+            classNames={{
+              appear: "animated",
+              appearActive: "fadeInRight"
+            }}
+          >
+            <div className="card" style={style}>
+              Day/Night Theme
+            </div>
+          </CSSTransition>
         }
         <div id="icon">
           {!this.props.theme && <i className="fas fa-lightbulb" />}
@@ -106,9 +117,19 @@ class Github extends React.Component {
       >
         {
           this.state.mouserOver &&
-          <div className="card" style={style}>
-            My Github
-          </div>
+          <CSSTransition
+            in={true}
+            appear={true}
+            timeout={1000}
+            classNames={{
+              appear: "animated",
+              appearActive: "fadeInRight"
+            }}
+          >
+            <div className="card" style={style}>
+              My Github
+            </div>
+          </CSSTransition>
         }
 
         <a href="https://github.com/billkondo" target="_blank" style={style}> <i className="fab fa-github" /> </a>
@@ -129,7 +150,7 @@ class header extends React.Component {
 
     return (
       <div id="header" style={style}>
-        <Logo theme={this.props.theme}/>
+        <Logo theme={this.props.theme} />
         <Theme />
         <Github theme={this.props.theme} />
       </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { CSSTransition } from 'react-transition-group';
 
 class GithubLinkProject extends React.Component {
   state = {
@@ -10,15 +11,15 @@ class GithubLinkProject extends React.Component {
       mouseover: true
     });
 
-  mouseLeave = () => 
+  mouseLeave = () =>
     this.setState({
       mouseover: false
     });
 
   render() {
     return (
-      <div 
-        className="github-link-project" 
+      <div
+        className="github-link-project"
         onMouseEnter={this.mouseEnter}
         onMouseLeave={this.mouseLeave}
       >
@@ -28,10 +29,20 @@ class GithubLinkProject extends React.Component {
         </a>
 
         {
-          this.state.mouseover && 
-          <div className='message' style={this.props.style}>
-            Github Repo 
-          </div>
+          this.state.mouseover &&
+          <CSSTransition
+            in={true}
+            appear={true}
+            timeout={800}
+            classNames={{
+              appear: "animated",
+              appearActive: "fadeInDown fast"
+            }}
+          >
+            <div className='message' style={this.props.style}>
+              Github Repo
+            </div>
+          </CSSTransition>
         }
       </div>
     );

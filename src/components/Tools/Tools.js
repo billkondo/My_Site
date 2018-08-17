@@ -4,6 +4,7 @@ import Information from './Information';
 import GithubLinkProject from './GithubLinkProject';
 import Modal from '../Modal';
 import { connect } from 'react-redux';
+import { CSSTransition } from 'react-transition-group';
 
 class tools extends React.Component {
   state = {
@@ -62,9 +63,19 @@ class tools extends React.Component {
 
           {
             this.state.mouseover &&
-            <div className="message" style={style}>
-              Go Back
-            </div>
+            <CSSTransition
+              in={true}
+              appear={true}
+              timeout={800}
+              classNames={{
+                appear: "animated",
+                appearActive: "fadeInDown fast"
+              }}
+            >
+              <div className="message" style={style}>
+                Go Back
+              </div>
+            </CSSTransition>
           }
 
         </div>

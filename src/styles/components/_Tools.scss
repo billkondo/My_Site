@@ -24,36 +24,39 @@
     a:visited, a:link {
       color: darkred;
     }
+  }
 
-    a:hover {
-      opacity: 0.5;
-    }
+  .github-link-project:hover {
+    transition: all 800ms ease-in-out;
+    opacity: 0.5;
+  }
 
-    a:active {
-      position: relative;
-      top: 5px;
-    }
+  .github-link-project:active {
+    position: relative;
+    top: 2px;
   }
 
   #back-link {
     position: relative;
     font-size: 50px;
     color: darkred;
+    cursor: pointer;
 
     justify-self: end;
 
     a:visited {
       color: darkred;
     }
+  }
 
-    a:hover {
-      opacity: 0.5;
-    }
+  #back-link:hover {
+    transition: all 800ms ease-in-out;
+    opacity: 0.5;
+  }
 
-    a:active {
-      position: relative;
-      top: 5px;
-    }
+  #back-link:active {
+    position: relative;
+    top: 2px;
   }
 
   #contain-information {
@@ -68,12 +71,13 @@
   }
 
   #information:hover {
+    transition: all 800ms ease-in-out;
     opacity: 0.5;
   }
 
   #information:active {
     position: relative;
-    top: 5px;
+    top: 2px;
   }
 
   .message {
